@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>餐馆信息</h1>
+    <div>
+        <a href="/add_restaurant/">添加餐馆</a>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>餐馆名称</th>
+                <th>餐馆地址</th>
+                <th>餐馆类型</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in restaurant_list %}
+                <tr>
+                    <td>{{ row.id }}</td>
+                    <td>{{ row.res_name }}</td>
+                    <td>{{ row.address }}</td>
+                    <td>{{ row.res_type }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
